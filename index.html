@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Jogo da forca</title>
+</head>
+<body>
+    <header>
+        <h1>jogo da forca</h1>
+    </header>
+
+    <main>
+        <div id="jogo">
+            <section>
+                <div id="chances">
+                    CHANCES <br>6
+                </div>
+
+                <div id="dica">
+                    OBJETO:
+                </div>
+
+            </section>
+            <div id="input">
+                <div id="linhasPalavra">
+                <p>_ _ _ _ _ _</p>
+                </div> 
+
+                <div id="letras">
+                    <span class="letra" id="0" onclick="verificar('a',0)">A</span>
+                    <span class="letra" id="1" onclick="verificar('b',1)">B</span>
+                    <span class="letra" id="2" onclick="verificar('c',2)">C</span>
+                    <span class="letra" id="3" onclick="verificar('d',3)">D</span>
+                    <span class="letra" id="4" onclick="verificar('e',4)">E</span>
+                    <span class="letra" id="5" onclick="verificar('f',5)">F</span>
+                    <span class="letra" id="6" onclick="verificar('g',6)">G</span>
+                    <span class="letra" id="7" onclick="verificar('h',7)">H</span>
+                    <span class="letra" id="8" onclick="verificar('i',8)">I</span>
+                    <span class="letra" id="9" onclick="verificar('j',9)">J</span>
+                    <span class="letra" id="10" onclick="verificar('k',10)">K</span>
+                    <span class="letra" id="11" onclick="verificar('l',11)">L</span>
+                    <span class="letra" id="12" onclick="verificar('m',12)">M</span>
+                    <span class="letra" id="13" onclick="verificar('n',13)">N</span>
+                    <span class="letra" id="14" onclick="verificar('o',14)">O</span>
+                    <span class="letra" id="15" onclick="verificar('p',15)">P</span>
+                    <span class="letra" id="16" onclick="verificar('q',16)">Q</span>
+                    <span class="letra" id="17" onclick="verificar('r',17)">R</span>
+                    <span class="letra" id="18" onclick="verificar('s',18)">S</span>
+                    <span class="letra" id="19" onclick="verificar('t',19)">T</span>
+                    <span class="letra" id="20" onclick="verificar('u',20)">U</span>
+                    <span class="letra" id="21" onclick="verificar('v',21)">V</span>
+                    <span class="letra" id="22" onclick="verificar('w',22)">W</span>
+                    <span class="letra" id="23" onclick="verificar('x',23)">X</span>
+                    <span class="letra" id="24" onclick="verificar('y',24)">Y</span>
+                    <span class="letra" id="25" onclick="verificar('z',25)">Z</span>
+                </div>
+
+                <button class="botao" onclick="novoJogo()">NOVO JOGO</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
