@@ -132,14 +132,14 @@ function verificar(letra, posicao){ // Irá analisar a letra e a posição infor
             if (isInclude == false){ // Caso a letra NÃO exista na palavra, será diminuído o total de chances para jogar novamente.
                 chances--;                
                 if (chances > 2){
-                    divChance.innerHTML = `CHANCES <br>${chances}`;
+                    divChance.innerHTML = `Restam <strong>${chances}</strong> Tentativas`;
                 }else{
                     if (chances >=1){
                         divChance.setAttribute("class", "red")
-                        divChance.innerHTML = `CHANCES <br>${chances}`;
+                        divChance.innerHTML = `Restam <strong>${chances}</strong> Tentativa`;
                     }else {
                         isComplete = true;
-                        divChance.innerHTML = "GAME <br> OVER";
+                        divChance.innerHTML = "GAME OVER";
                         botao.setAttribute("class", "show");
                         divDica.innerHTML = `PALAVRA: <br> ${palavra}`
                     }
@@ -181,7 +181,7 @@ function novoJogo(){ // Irá criar um novo jogo, deixando todos os botões acess
 
     palavraAnterior = palavra;
     chances = 6;
-    divChance.innerHTML = `CHANCES <br>${chances}`;
+    divChance.innerHTML = `Restam <strong>${chances}</strong> Tentativas`;
 
     if (divChance.hasAttribute("class", "red")){
         divChance.removeAttribute("Class", "red");
