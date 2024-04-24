@@ -104,7 +104,7 @@ span {
     align-items: center;
     width: 60px;
     height: 51px;
-    font-size: 27px;
+    font-size: 32px;
     border-radius: 5px;
     background-color: rgb(39, 39, 39);
     color: rgb(83, 83, 83);
@@ -152,4 +152,43 @@ button.show {
 button.show {
     transform: translate(0px, 0px);
     opacity: 100%;
+}
+
+.left-cloud {
+    position: fixed;
+    left: -70px;
+    bottom: -65px;
+}
+
+.right-cloud {
+    position: fixed;
+    right: -230px;
+    bottom: -65px;
+}
+
+@media (max-width: 1319px) {
+    .left-cloud, .right-cloud {
+        max-width: 445px;
+    }
+
+    .left-cloud {
+        left: -47px;
+        bottom: -39px;        
+    }
+
+    .right-cloud {
+        right: -131px;
+        bottom: -39px;
+    }
+}
+
+@media (max-width: 930px) {
+    span.letra {
+        width: 40px;
+        height: 47px;
+    }
+
+    div#letras {
+        max-width: 440px;
+    }
 }
