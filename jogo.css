@@ -9,9 +9,9 @@
 body {
     font-family: var(--fontePadrao);
     background: linear-gradient( 
-    #112A40 38%,   /* Vermelho */
-    #1E4970 76%,  /* Amarelo */
-    #2C6DA6 100% /* Azul */
+    #112A40 38%,
+    #1E4970 76%,
+    #2C6DA6 100%
   );
     color: white;
     background-attachment: fixed;
@@ -41,18 +41,11 @@ main {
     margin-top: 3%;
 }
 
-/* section {
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    font-size: 20px;
-} */
-
 #chances {
     width: fit-content;
     margin: auto;
     margin-bottom: 90px;
-    margin-top: -31px;
+    margin-top: -50px;
     text-align: center;
     transition: 0.4s;
     background-color: white;
@@ -64,12 +57,18 @@ main {
     font-weight: 500;
 }
 
+#chances, #botao {
+    letter-spacing: 1.7px;
+}
+
 .red {
     background-color: #ff3d3d !important;
 }
 
 #dica {
     text-align: center;
+    max-width: 360px;
+    margin: auto;
 }
 
 div#input {
@@ -96,6 +95,7 @@ div#letras {
     align-items: center;
     max-width: 650px;
     gap: 10px;
+    z-index: 4;
 }
 
 span {
@@ -130,28 +130,37 @@ span.letra:hover {
     background-color: rgb(194, 194, 194);
 }
 
-button {
+span#botao {
     margin-top: 7%;
+    font-size: 15px;
+    font-weight: 500;
     color: black;
-    background-color: white;
+    background-color: rgb(75, 208, 72);
     border-style: none;
     border-radius: 5px;
-    outline: 4px solid #d9d9d9a8;
     outline-offset: -4px;
-    opacity: 0%;
-    padding: 10px 15px;
-    transition: 0.4s;
+    opacity: 0;
+    padding: 10px 9px;
+    transition: all 0.4s ease 0s;
     cursor: pointer;
     transform: translate(0px, 10px);
+    position: absolute;
+    bottom: 37px;
+    width: fit-content !important;
+    height: 15px !important;
 }
 
-button.show {
+span#botao.show {
     transform: scale(1.04);
 }
 
-button.show {
+span#botao.show {
     transform: translate(0px, 0px);
     opacity: 100%;
+}
+
+.left-cloud, .right-cloud {
+    z-index: 3;
 }
 
 .left-cloud {
@@ -164,6 +173,19 @@ button.show {
     position: fixed;
     right: -230px;
     bottom: -65px;
+}
+
+.earth {
+    position: absolute;
+    right: 56px !important;
+    width: 128px;
+    top: 73px !important;
+}
+
+.robot {
+    position: absolute;
+    left: 75px !important;
+    top: 98px !important;
 }
 
 @media (max-width: 1319px) {
@@ -180,15 +202,64 @@ button.show {
         right: -131px;
         bottom: -39px;
     }
+
+    #chances {
+        margin-top: -30px;
+    }
 }
 
 @media (max-width: 930px) {
-    span.letra {
+    div#letras span {
         width: 40px;
         height: 47px;
     }
 
     div#letras {
         max-width: 440px;
+    }
+
+    #chances {
+        margin-top: -10px;
+        margin-bottom: 50px;
+    }
+
+    .robot {
+        left: 28px !important;
+    }
+
+    .earth {
+        right: 7px !important;
+    }
+}
+
+@media (max-width: 635px) {
+    .left-cloud, .right-cloud {
+        max-width: 340px;
+    }
+
+    .left-cloud {
+        left: -90px;
+    }
+
+    .earth {
+        position: fixed !important;
+        right: -39px !important;
+        top: 40px !important;
+        width: 95px !important;
+    }
+
+    .robot {
+        left: -5px !important;
+        width: 73px;
+        top: 50px !important;
+        position: fixed !important;
+    }
+}
+
+@media (max-width: 485px) {
+    div#letras {
+        padding: 0;
+        background-color: transparent;
+        max-width: 380px;
     }
 }

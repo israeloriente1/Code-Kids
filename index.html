@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="jogo.css">
     <title>Jogo da forca</title>
     <style>
@@ -19,6 +20,8 @@
         <!-- Elements -->
         <img src="./assets/cloud.svg" class="left-cloud" alt="Cloud">
         <img src="./assets/cloud2.svg" class="right-cloud" alt="Cloud">
+        <img src="./assets/earth.svg" class="earth" alt="earth">
+        <img src="./assets/robot.svg" class="robot" alt="robot">
 
         <div id="jogo">
             <section>
@@ -63,9 +66,9 @@
                     <span class="letra" id="23" onclick="verificar('x',23)">X</span>
                     <span class="letra" id="24" onclick="verificar('y',24)">Y</span>
                     <span class="letra" id="25" onclick="verificar('z',25)">Z</span>
-                </div>
 
-                <button class="botao" onclick="novoJogo()">NOVO JOGO</button>
+                    <span class="botao" id="botao">NOVO JOGO</span>
+                </div>                
             </div>
         </div>
     </main>
